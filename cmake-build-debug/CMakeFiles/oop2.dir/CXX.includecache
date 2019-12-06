@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/LENOVO/CLionProjects/OOP/lab2/main.cpp
+iostream
+-
+money.h
+C:/Users/LENOVO/CLionProjects/OOP/lab2/money.h
+fstream
+-
+
+C:/Users/LENOVO/CLionProjects/OOP/lab2/money.h
+iostream
+-
+
