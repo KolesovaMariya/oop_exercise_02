@@ -3,8 +3,8 @@
 #include <fstream>
 int main() {
     //для чтения из файла в CLion на винде
-    std::ifstream in(R"(C:\Users\LENOVO\CLionProjects\OOP\lab2\test_01.txt)");
-    std::cin.rdbuf(in.rdbuf());
+    //std::ifstream in(R"(C:\Users\LENOVO\CLionProjects\OOP\lab2\test_01.txt)");
+    //std::cin.rdbuf(in.rdbuf());
     int n;
     std::cout << "Сколько пар сумм вы хотите ввести? " << std::endl;
     std::cin >> n;
