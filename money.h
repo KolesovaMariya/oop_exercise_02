@@ -16,11 +16,7 @@ public:
     friend std::istream& operator>>(std::istream &in, Money &a);
 
 
-    Money operator+(const Money &b);
-    Money operator-(const Money &b);
-    Money operator*(const double &b);
-    Money operator/(const double &b);
-    Money operator/(const Money &b);
+  
 
     Money operator+(const Money &b) const;
     Money operator-(const Money &b) const;

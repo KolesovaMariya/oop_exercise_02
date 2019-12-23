@@ -72,56 +72,9 @@ bool Money::operator==(const Money &b) const {
     return false;
 }
 
-Money Money::operator+(const Money &b) {
-    Money tmp = {rub, kop};
-    tmp.rub = rub + b.rub;
-    tmp.kop = kop + b.kop;
-    if (tmp.kop > 99) {
-        tmp.rub +=1;
-        tmp.kop -= 100;
-    }
-    return tmp;
-}
-Money Money::operator-(const Money &b) {
-    unsigned long long new_rub = rub;
-    unsigned char new_kop = kop;
-    if(*this < b) {
-        return {0, 0};
-    }
-    Money tmp = {new_rub, new_kop};
-    tmp.rub = new_rub - b.rub;
-    if (new_kop < b.kop) {
-        tmp.rub -= 1;
-        new_kop += 100;
-    }
-    tmp.kop = new_kop - b.kop;
-    return tmp;
-}
-Money Money::operator*(const double &b) {
-    Money tmp_m;
-    unsigned long long tmp = rub*100 + kop;
-    double result = tmp*b;
-    tmp_m.rub = (unsigned long long)result/100;
-    tmp_m.kop = (unsigned char)((unsigned long long )result%100);
-    return tmp_m;
-}
-Money Money::operator/(const double &b) {
-    Money tmp_money;
-    unsigned long long tmp = rub*100 + kop;
-    tmp /= b;
-    tmp_money.kop = tmp%100;
-    tmp_money.rub = tmp/100;
-    return tmp_money;
-}
-Money Money::operator/(const Money &b) {
-    Money tmp_money;
-    unsigned long long tmp_1 = rub*10000 + (int)kop*100;
-    unsigned long long tmp_2 = b.rub*100 + b.kop;
-    unsigned long long result = tmp_1/tmp_2;
-    tmp_money.rub = result/100;
-    tmp_money.kop = result%100;
-    return tmp_money;
-}
+
+
+
 Money Money::operator+(const Money &b) const {
     Money tmp = {rub, kop};
     tmp.rub = rub + b.rub;
